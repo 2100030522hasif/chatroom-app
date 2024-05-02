@@ -18,13 +18,13 @@ const Login = () => {
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
 				<h1 className='text-3xl font-semibold text-center text-gray-300'>
 					Login
-					<span className='text-blue-500'> ChatApp</span>
+					<span className='text-blue-500' style={{ color: '#45624e' }}> ChatRoom</span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
 					<div>
 						<label className='label p-2'>
-							<span className='text-base label-text'>Username</span>
+							<span className='text-base label-text'style={{ color: '#000000' }} >Username</span>
 						</label>
 						<input
 							type='text'
@@ -32,27 +32,35 @@ const Login = () => {
 							className='w-full input input-bordered h-10'
 							value={username}
 							onChange={(e) => setUsername(e.target.value)}
+							style={{
+								backgroundColor: '#638156'
+							}}
 						/>
 					</div>
 
 					<div>
 						<label className='label'>
-							<span className='text-base label-text'>Password</span>
+							<span className='text-base label-text' style={{ color: '#000000' }}>Password</span>
 						</label>
 						<input
 							type='password'
 							placeholder='Enter Password'
-							className='w-full input input-bordered h-10'
+							className='w-full input input-bordered h-10' 
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
+							style={{
+								backgroundColor: '#638156'
+							}}
 						/>
 					</div>
-          <Link to='/signup'className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'>
+          <Link to='/signup'className='text-sm  hover:underline hover:text-blue-600 mt-2 inline-block'style={{ color: '#000000' }}>
 						{"Don't"} have an account?
 					</Link>
           <div>
-					  <button className='btn btn-block btn-sm mt-2' disabled={loading}>
-							{loading ? <span className='loading loading-spinner '></span> : "Login"}
+					  <button className='btn btn-block btn-sm mt-2' disabled={loading}
+						style={{ backgroundColor: '#000000', color: '#ffffff' }}
+						>
+							{loading ? <span className='loading loading-spinner'></span> : "Login"}
 						</button>
 					</div>
         </form>
