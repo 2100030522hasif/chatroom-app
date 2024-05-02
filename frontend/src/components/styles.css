@@ -1,0 +1,21 @@
+.selected-conversation {
+  background-color: #45624e;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+.message-container {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    width: 25%;
+  }
+
+  .message-container {
+    width: 75%;
+  }
+}
